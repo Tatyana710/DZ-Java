@@ -9,15 +9,15 @@ Public class Main {
         for (int i = 0; i < 6; i++) {
             if (min < 15) min = nums[i];
             System.out.println(min);
-            System.out.println("Четверть2:");
+        System.out.println("Четверть2:");
             if (min < 30) min = nums[i];
-                System.out.println(min);
-                System.out.println("Четверть3:");
+                else System.out.println(min);
+        System.out.println("Четверть3:");
                 if (min<45) min=nums[i];
-            System.out.println(min);
-                System.out.println("Четверть4:");
+                else System.out.println(min);
+        System.out.println("Четверть4:");
                 if (min<60) min=nums[i];
-                System.out.println(min);
+                else System.out.println(min);
             }
 
 

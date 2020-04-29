@@ -8,8 +8,8 @@ import jdk.dynalink.beans.StaticClass;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int a = nums[0];
+    Scanner scan = new scan (System.in);
+        int a = scan.nextInt();
         int mod= a%2;
                 for (int i = 0;i<10; i++) {
             if (mod==0); a=nums[i]+10;

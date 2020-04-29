@@ -12,9 +12,9 @@ public class Main {
         int a = scan.nextInt();
         int mod= a%2;
                 for (int i = 0;i<10; i++) {
-            if (mod==0); a=nums[i]+10;
+            if (mod==0); a=scan[i]+10;
             System.out.println(a);
-            if (mod!=0); a=nums[i]*10;
+            if (mod!=0); a=scan[i]*10;
             System.out.println(a);
         }
 

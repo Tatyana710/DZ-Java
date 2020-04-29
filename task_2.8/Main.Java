@@ -5,8 +5,7 @@ C помощью цикла for сформируйте строку "123456789" 
 import java.util.Scanner;
 public class Main {
 public static void main(String[] args) {
-    Scanner scan =new Scanner(System.in);
-     for (int str = 1;str<10; str++) {
+    for (int str = 1;str<10; str++) {
         System.out.println(str);
         }
 

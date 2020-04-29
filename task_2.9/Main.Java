@@ -4,21 +4,22 @@ task_2.9
 на экран число, котрое больше введённого с клавитатуры на 10, в противном случае выводит на экран число 
 в 10 раз больше введённого
 */
-import jdk.dynalink.beans.StaticClass;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    Scanner scan = new scan (System.in);
+        Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
-        int mod= a%2;
-                for (int i = 0;i<10; i++) {
-            if (mod==0); a=scan[i]+10;
-            System.out.println(a);
-            if (mod!=0); a=scan[i]*10;
-            System.out.println(a);
+        double mod= a%2;
+        for (int i = 0;i<100; i++) {
+            if (mod==a); a= scan.nextInt(i);
+            System.out.println(a+10);
+            if (mod!=a); a=scan.nextInt(i);
+            System.out.println(a*10);
         }
 
     }
 }
+
 
 

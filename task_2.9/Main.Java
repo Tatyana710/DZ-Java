@@ -15,7 +15,7 @@ public class Main {
             if (mod==a); a= scan.nextInt(i);
             System.out.println(a+10);
             if (mod!=a); a=scan.nextInt(i);
-            System.out.println(a*10);
+            else System.out.println(a*10);
         }
 
     }

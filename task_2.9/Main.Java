@@ -10,16 +10,23 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
-        for (int i = 0; i < 100; i++) {
-            if ((a % 2) == 0) {
+                    if ((a % 2) == 0) {
                 System.out.println(a + 10);
             } else {
-                if ((a % 2) != 0) ;
+                   if ((a % 2) != 0) ;
                 {
                     System.out.println(a * 10);
                 }
             }
         }
     }
-}
+
+
+
+
+
+
+
+
+
 

@@ -10,16 +10,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
-        double mod= a%2;
-        for (int i = 0;i<100; i++) {
-            if (mod==a); a= scan.nextInt(i);
-            System.out.println(a+10);
-            if (mod!=a); a=scan.nextInt(i);
-            else System.out.println(a*10);
+        for (int i = 0; i < 100; i++) {
+            if ((a % 2) == 0) {
+                System.out.println(a + 10);
+            } else {
+                if ((a % 2) != 0) ;
+                {
+                    System.out.println(a * 10);
+                }
+            }
         }
-
     }
 }
-
-
 

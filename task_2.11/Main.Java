@@ -3,25 +3,32 @@
 */
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {3, 13, 19, 34, 47, 55};
-        int min = nums[0];//число 3
-        System.out.println("Четверть1:");
-        for (int i = 0; i < 6; i++) {
-            min+=nums[i];
-            if (nums[i] < 15) min = nums[i];
-            System.out.println(nums[i]);
-            System.out.println("Четверть2:");
-            if (nums[i] <30) min = nums[i];
-            System.out.println(nums[i]);
-            System.out.println("Четверть3:");
-            if (nums[i]<45) min=nums[i];
-            System.out.println(nums[i]);
-            System.out.println("Четверть4:");
-            if (nums[i]<60) min=nums[i];
-            System.out.println(nums[i]);
-        }
+        int[] nums={3,13,27,34, 55, 59};
+        int min = nums[3];
+        for (int i = 0; i < 7; i++)
+                      {
+                        if (min>0 && min < 14) {
+                            System.out.println("Четверть 1:" + min);
+                        }else
+                        { if (min>15 && min < 29) {
+                                    System.out.println("Четверть 2:" + min);
+
+                                }else
+
+                                    { if (min>30 && min < 44) {
+                                            System.out.println("Четверть 3:" + min);
+
+                                        }else
+                                        {if (min>45 && min < 60) {
+                                                    System.out.println("Четверть 4:" + min);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
 
 
-    }
 
-}
+

@@ -2,6 +2,7 @@
 написать функцию, которая возвращает минимум из четырёх чисел. Функция min (a,b,c,d) должна(вызывать фугкцию min (a,b),
 которую разрабатывали в задаче 4.1
 */
+public class Main {
  public static void main(String[] args) {
         int a = 7;
         int b = 5;

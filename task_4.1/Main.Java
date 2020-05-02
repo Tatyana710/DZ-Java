@@ -9,8 +9,9 @@ public class Main {
         if (a < b) System.out.println(a);
     }
 
-    static void min(int a, int b) {
-        return;
+    static int min(int a, int b) {
+        if (a>b) return (a);
+        else return (b);
 
     }
 }

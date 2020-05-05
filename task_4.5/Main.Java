@@ -7,26 +7,19 @@
 */
 public class Main {
     public static void main(String[] args) {
-        int x = 1;
-        int n = 5;
-        System.out.println(pow(x, n)+ " 2 3 4");
 
-        if (x > 0 || x <= 10) x++;
-        {
-            System.out.println(pow(x, n)+ " 4 6 8");
+        for(int x=0; x<4;x++) {
+            for (int n = 0; n < 4; n++) {
+                System.out.print((x + 1) * (n + 1));
+            }
+            {
+                System.out.println();
+            }
         }
-
-
-        {
-            System.out.println(pow(x + 1, n)+" 6 9 12" );
         }
-
-        System.out.println(pow(x + 2, n)+ " 8 12 16");
-    }
-
 
     static int pow(int x, int n) {
-        if (n != 1) return pow(x, n - 1);
+        if (n != 1) return pow(x, n );
         else return x;
     }
 }

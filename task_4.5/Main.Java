@@ -7,19 +7,15 @@
 */
 public class Main {
     public static void main(String[] args) {
-
-        for(int x=0; x<4;x++) {
-            for (int n = 0; n < 4; n++) {
-                System.out.print((x + 1) * (n + 1));
+        for (int i = 0; i < 10; i++) {
+            for (int j=0;j<10;j++){
+                System.out.print((i+1)*(j+1));
             }
-            {
-                System.out.println();
-            }
+            System.out.println();
         }
-        }
-
-    static int pow(int x, int n) {
-        if (n != 1) return pow(x, n );
-        else return x;
     }
-}
+
+
+    }
+
+

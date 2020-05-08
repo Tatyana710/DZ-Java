@@ -3,14 +3,16 @@
     
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {3, 13, 5, 34, 47, 55};
+     int[] nums = {3, 13, 5, 34, 47, 55};
         int a = nums[0];
+        System.out.println("Да");
+        System.out.println("Нет");
         for (int i = 0; i < 6; i++) {
             a += nums[i];
-            if (nums[i] == 5) System.out.println("Да");
-            if (nums[i] != 5) System.out.println("Heт");
+            if (nums[i] == 5) ;
+            if (nums[i] != 5) ;
+
 
         }
     }
 }
-   

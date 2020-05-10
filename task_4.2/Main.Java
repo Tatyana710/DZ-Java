@@ -4,22 +4,18 @@ public class Main {
         int a = min(7);
         int b = min(5);
         int c = min(3);
-        if (min(a) > min(b) && min(b) > min(c)) System.out.println(min(c));
-        if (min(a) < min(b) && min(b) < min(c)) System.out.println(min(a));
-        if (min(a) > min(c) && min(c) > min(b)) System.out.println(min(b));
-
-
+        System.out.println(min(7,5,3));
     }
-
     private static int min(int i) {
-        return 0;
+        return i;
     }
-
-    static int min ( int a, int b, int c){
-            if (a > b && b > c) return (c);
-            else if (c > b && b > a) ;
-            else if (a > c && c > b) ;
-            return a;
+    static int min(int a, int b, int c) {
+            if (a > b || b > c) return (c);
+            else if (c > a || a > b) return b;
+            else if (c > a || b > a) return a;
+            return min (a, b, c);
         }
-    }
+}
+
+      
 

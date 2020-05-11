@@ -1,6 +1,6 @@
 /* Создать класс Dog. У собаки должна быть кличка String name и возраст int age.
 *Создайте геттеры и сеттеры для всех переменных класса Dog.
-* Сщздайте объект Dog  */
+* Создайте объект Dog  */
 
 public class Main<dog> {
     public static void main(String[] args) {

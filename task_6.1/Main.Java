@@ -8,60 +8,57 @@
 8.В классе CheapCar реализуйте метод printlnDesure, чтобы он выводил на экран "Я хочу ездить на дешёвой машине.
 9. В классах LuxuriousCar и CheapCar для метода printlnDesure расставьте различными методами доступа так, чтобы в классах Ferrari и Lanos выполнялось расширение видимости
  */
-public class Main{
-    public static void main(String [] args) {
-        new Main.LuxiurousCar().printlnDesire();
-        new Main.CheapCar().printlnDesire();
-        new Main.Ferrari().printlnDesire();
-        new Main.Lanos().printlnDesire();
+public class Main {
+    public static void main(String[] args) {
+        new Main.LuxiurousCar(true).printlnDesire();
+        new Main.CheapCar(false).printlnDesire();
+        new Main.Ferrari(false).printlnDesire();
+        new Main.Lanos(true).printlnDesire();
     }
-    public static class Ferrari{
-        public void printlnDesire( ){
-            String myCar= "Моя машина Ferrari";
-            System.out.println(myCar+Constants.WANT_STRING+Constants.FERRARI_NAME);
+
+    public static class Ferrari {
+        String myCar = "Моя машина Ferrari";
+        public Ferrari(boolean myCar){
+         }
+        public void printlnDesire() {
+          System.out.println(myCar + Constants.WANT_STRING + Constants.FERRARI_NAME);
         }
     }
+
     public static class Lanos {
-        public void printlnDesire(){
-            String myCar1= "Моя машина Lanos";
-            System.out.println(myCar1+Constants.WANT_STRING+Constants.LANOS_NAME);
+        String myCar1 = "Моя машина Ланос";
+        public Lanos(boolean myCar1) {
+        }
+        public void printlnDesire() {
+            System.out.println(myCar1 + Constants.WANT_STRING + Constants.LANOS_NAME);
         }
     }
+
     public static class LuxiurousCar {
-        protected void printlnDesire(){
-            String myCar2= "Моя машина Luxiurous";
-            System.out.println(myCar2+ Constants.WANT_STRING+Constants.LUXURIOUS_CAR);
-        }
-   }
-   public static class CheapCar {
-        String myCar3= "Эта Машина";
-        public void printlnDesire(){
-            System.out.println(myCar3+new CheapCar()+Constants.CHEAP_CAR);
-        }
-   }
-    public static class CheapCar extends Lanos {
-        String myCar1;
-        public CheapCar (String myCar1){
-            this.myCar1=myCar1;
-        }
-        public void printlnDesire(){
-            System.out.println(myCar1+Constants.WANT_STRING+Constants.LANOS_NAME);
-        }
-    }
-    public static Ferrari extends LuxiurousCar {
-        String myCar2;
-        public Ferrari (String myCar2);
-        this.myCar2=myCar2;
-       public void printlnDesire(){
-            System.out.println (myCar2+Constants.WANT_STRING+Constants.LUXURIOUS_CAR);
+        String myCar2 = "Моя машина Luxiurous";
+        public LuxiurousCar (boolean myCar2){
 
         }
+        protected void printlnDesire() {
+          System.out.println(myCar2 + Constants.WANT_STRING + Constants.LUXURIOUS_CAR);
+        }
     }
-        public static class Constants {
-        public static String WANT_STRING = "Я хочу ездить на ";
-        public static String LUXURIOUS_CAR = "РОСКОШНАЯ МАШИНА";
-        public static String CHEAP_CAR = "ДЕШЁВАЯ МАШИНА";
-        public static String FERRARI_NAME = "Феррари";
-        public static String LANOS_NAME = "Ланосе";
-   }
+
+    public static class CheapCar {
+        String myCar3 = "Моя Машина";
+        public CheapCar(boolean myCar3) {
+        }
+        protected void printlnDesire() {
+
+            System.out.println(myCar3+Constants.CHEAP_CAR);
+        }
 }
+            public static class Constants {
+                public static String WANT_STRING = " Я хочу ездить на ";
+                public static String LUXURIOUS_CAR = " РОСКОШНОЙ МАШИНЕ";
+                public static String CHEAP_CAR = " ДЕШЁВАЯ МАШИНА";
+                public static String FERRARI_NAME = " Феррари";
+                public static String LANOS_NAME = " Ланосе";
+            }
+        }
+

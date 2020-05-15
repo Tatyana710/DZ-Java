@@ -3,15 +3,13 @@
 public class Main {
     public static void main(String[] args) {
         int[] nums = {4, 4, 10, 5, 7, 55};
-        int a = nums[0];
-        int b = nums[1];
-        for (int i = 0; i < nums.length; i++) {
-            nums[i]=a;
-            for (int j = 1; j < nums.length; j++) {
-                nums[j]=b;
-                if (nums[j] != nums[i]) a+= b;}}
-                if(a==b) System.out.println("да");
-           else if (a != b) System.out.println("нет");
-
-
-        
+        boolean a=false;
+        for (int i = 1; i < 6; i++) {
+            if (nums[i - 1] == nums[i]) a = true;
+        }if(a) {
+            System.out.println("да");
+        } else if(!a) {
+            System.out.println("нет");
+        }
+    }
+}

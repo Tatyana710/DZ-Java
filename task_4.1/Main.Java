@@ -3,15 +3,19 @@
 */
 public class Main {
     public static void main(String[] args) {
-        int a = 7;
-        int b = 5;
-        if (a > b) System.out.println(b);
-        if (a < b) System.out.println(a);
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        if(a<b)System.out.println(min (a,b));
+        if(a>b) System.out.println(min (a,b));
     }
 
-    static int min(int a, int b) {
-        if (a>b) return (a);
-        else return (b);
+    private static int min(int a, int b) {
+        if (a<b) return a;
+        else return b;
 
     }
-}
+
+
+    }
+

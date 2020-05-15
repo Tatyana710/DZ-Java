@@ -2,29 +2,20 @@
 */
 public class Main {
     public static void main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
+        String[] stroka = {"Мама Мыла Раму"};
+        String newstr = " ";
+        for (int i = 0; i < stroka.length; i++) {
+             if (newstr==stroka[i]) newstr+= " ";
 
-        String a = "Мама";
-        String b = "Мыла";
-        String c = "Раму";
-        {
-            System.out.println(a + b + c);
+                System.out.print(Arrays.toString(stroka));
+
+
+            }
         }
 
-        {
-            System.out.println(b + c + a);
-        }
+                }
 
-        {
-            System.out.println(c + a + b);
-        }
-        {
-            System.out.println(c + b + a);
-        }
-        {System.out.println(a+c+b);
-    }
-        System.out.println(b+c+a);}
-    static String slovo(String a, String b, String c) {
 
-        return slovo (a,b, c);
-    }
-}
+    

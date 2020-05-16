@@ -2,14 +2,12 @@
 */
 public class Main {
     public static void main(String[] args) {
-public class Main {
-    public static void main(String[] args) {
         String[] stroka = {"Мама Мыла Раму"};
         String newstr = " ";
         for (int i = 0; i < stroka.length; i++) {
-             if (newstr==stroka[i]) newstr+= " ";
+             if (newstr==stroka[i]) newstr+= " "+1;
 
-                System.out.print(Arrays.toString(stroka));
+                System.out.print();
 
 
             }

@@ -2,11 +2,13 @@
         которую разрабатывали в задаче 4.1 */
 public class Main {
     public static void main(String[] args) {
-        int z = min(7, 5);
-        int y = min(8, 6);
-        if (min(7, 5) < (min(8, 6))) z = min(7, 5);
-        System.out.println(min(7, 5));
-        System.out.println(min(8, 6));
+        int a=7;
+        int b=5;
+        int c=2;
+        int d=9;
+        if (min(a,b) < (min(c,d))) min(a,b);
+        System.out.println(min(a,b));
+        System.out.println(min(c,d));
 
     }
 

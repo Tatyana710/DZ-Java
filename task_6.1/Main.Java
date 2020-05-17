@@ -44,7 +44,7 @@ public class Main {
 
         public void printlnDesire() {
             System.out.println(Constants.WANT_STRING + Constants.LANOS_NAME);
-            System.out.println(Constants.LANOS_NAME+""+Lanos.getColor2()+""+Lanos.getMotor2());
+            System.out.println(Constants.LANOS_NAME+" "+" "+Lanos.getColor2()+" "+" "+Lanos.getMotor2());
 
         }
     }
@@ -61,7 +61,7 @@ public class Main {
         static String getMotor3() {return "очень мощный";}
         public void printlnDesire() {
             System.out.println(Constants.WANT_STRING + Constants.LUXURIOUS_CAR);
-            System.out.println(LuxiurousCar.getColor3()+""+LuxiurousCar.getMotor3());
+            System.out.println("Лакшери"+""+LuxiurousCar.getColor3()+""+""+LuxiurousCar.getMotor3());
 
         }
     }
@@ -83,10 +83,11 @@ public class Main {
     public static class Constants {
         public static String WANT_STRING = " Я хочу ездить на ";
         public static String LUXURIOUS_CAR = " РОСКОШНОЙ МАШИНЕ";
-        public static String CHEAP_CAR = " ДЕШЁВJQ МАШИНE";
+        public static String CHEAP_CAR = " ДЕШЁВОЙ МАШИНE";
         public static String FERRARI_NAME = " Феррари";
         public static String LANOS_NAME = " Ланос";
     }
 
 }
+
 

@@ -17,6 +17,11 @@ public class Main {
         Human child1 = new Human("Михаил", false, 22, father , mother);
         Human child2 = new Human("Аня", true, 21, father , mother);
         Human child3 = new Human("Игорь", false, 2, father , mother);
+        System.out.println(mother);
+        System.out.println(grandMa2);
+        System.out.println(child3);
+
+
     }
     public static class Human {
         String name;
@@ -40,7 +45,7 @@ public class Main {
         }
 
         public String toString() {
-            String text = "";
+            String text = " ";
             text += "Имя: " + this.name;
             text += ", пол: " + (this.sex ? "мужской" : "женский");
             text += ", возраст: " + this.age;
@@ -55,3 +60,5 @@ public class Main {
         }
     }
 }
+
+

@@ -5,15 +5,13 @@ public class Main {
         String[] stroka = {"Мама Мыла Раму"};
         String newstr = " ";
         for (int i = 0; i < stroka.length; i++) {
-             if (newstr==stroka[i]) newstr+= " "+1;
+            if (newstr==stroka[i]) newstr+= " "+1;
+            System.out.print(""+stroka[i]);
 
-                System.out.print();
 
+          }
+    }
 
-            }
-        }
-
-                }
-
+}
 
     

@@ -4,19 +4,19 @@
 public class Main {
     public static void main(String[] args) {
         Cat cat = new Cat(5,"Пушок",3,2);
-        System.out.println("Привет! Я"+ cat.name+"!" +  "Mне" +cat.age +"лет !"+ "Мой вес" +cat.weight+"-кг !" +"Моя сила" +"-"+ cat.strength+"!");
+        System.out.println("Привет! Я "+ cat.name+"! " +  "Mне " +cat.age +"лет !"+ "Мой вес" +cat.weight+"-кг !" +"Моя сила" +"-"+ cat.strength+"!");
     }
 }
 
-    class Cat {
-        int age;
-        String name;
-        int weight;
-        int strength;
-        Cat(int age, String name, int weight, int strength) {
-            this.age = 5;
-            this.name = "Пушок";
-            this.strength = 2;
-            this.weight = 3;
-        }
+class Cat {
+    int age;
+    String name;
+    int weight;
+    int strength;
+    Cat(int age, String name, int weight, int strength) {
+        this.age = age;
+        this.name = name;
+        this.strength = strength;
+        this.weight = weight;
     }
+}

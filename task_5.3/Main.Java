@@ -11,7 +11,7 @@ public class Main {
         Cat cat2 = new Cat(2, 3, 2, false);
         if (cat1.fight(cat2)) System.out.println("Выиграл Cat1: " + cat1);
         if (cat2.fight(cat1)) System.out.println("Выиграл Cat2: " + cat2);
-        if ((cat1.fight(cat2)) == cat2.fight(cat1)) System.out.println("Ничья");
+        
     }
 }
 class Cat {

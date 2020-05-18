@@ -7,7 +7,8 @@
  7. В классе Dragon метод getSize() должен возвращать строку "Дракон большой,"+ [getSize родительского клсса].
  */
 public class Main {
-    public class Dragon {
+       public static void main(String[] args) {
+         public class Dragon {
         String speak;
         boolean veget;
         byte pows;
@@ -32,8 +33,6 @@ public class Main {
             this.pows = pows;
         }
     }
-
-    public static void main(String[] args) {
         class BigAnimal {
             String speak;
             boolean veget;

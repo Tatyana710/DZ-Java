@@ -50,7 +50,7 @@ public class Main {
         public String toString() {
             String text = " ";
             text += "Имя: " + this.name;
-            text += ", пол: " + (this.sex ? "мужской" : "женский");
+            text += ", пол: " + (this.sex ? "женский" : "мужской");
             text += ", возраст: " + this.age;
 
             if (this.father != null)

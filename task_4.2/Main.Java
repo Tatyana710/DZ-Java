@@ -15,10 +15,7 @@ public class Main {
 
     }
 
-    private static void min(int a, int b) {
-        return;
-
-    }
+   
 }
 
 

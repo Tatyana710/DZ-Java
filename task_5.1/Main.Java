@@ -11,7 +11,7 @@ public class Main {
         private String name = "Безымянный кот";
 
         public void setName(String name) {
-            this.name = name;
+            if(this.name != name);
             System.out.println("Безымянный кот");
 
 

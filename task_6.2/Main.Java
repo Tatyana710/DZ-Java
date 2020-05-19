@@ -6,76 +6,102 @@
  6. В классе Goose метод getSize() должен возвращать строку "Гусь маленький," +[getSize родительского класса].
  7. В классе Dragon метод getSize() должен возвращать строку "Дракон большой,"+ [getSize родительского клсса].
  */
+import Dragon.Dragon;
+import Goose.Goose;
+
 public class Main {
     public static void main(String[] args) {
+        Goose goose = new Goose("Га-га-га",true,2,"как кошка");
+        Dragon dragon =new Dragon(false,4, "огонь","дракон боольшой");
 
-       public static class Goose {
-            String speak;
-            boolean veget;
-            byte pows;
 
-            public Goose(String speak, boolean veget, byte pows) {
-                this.speak = speak;
-                this.veget = veget;
-                this.pows = pows;
-            }
-
-            public static class Dragon {
-                String speak;
+            class SmallAnimal {
+                String smallsize;
                 boolean veget;
+                String speak;
                 byte pows;
-                String fire;
 
-                public Dragon(String speak, boolean veget, byte pows, String fire) {
-                    this.speak = speak;
+                public SmallAnimal(boolean veget, String speak, byte pows, String smallsize) {
                     this.veget = veget;
+                    this.smallsize = smallsize;
+                    this.speak = speak;
                     this.pows = pows;
-                    this.fire = fire;
                 }
 
-                 static class SmallAnimal {
-                    public SmallAnimal(boolean veget, String speak, byte pows) {
+                 boolean getVeget() {return this.veget;}
+                String getSpeak(){return this.speak;}
+                byte getPows (){return this.pows;}
+                static String getSize() {return "как кошка";}
+
+                class BigAnimal {
+                    public BigAnimal(boolean veget, String fire, byte pows, String bigsize) {
+                        this.veget1 = veget;
+                        this.pows1 = pows;
+                        this.fire1 = fire;
+                        this.bigsize= bigsize;
                     }
 
-                    static String getSize() {
-                        return "как кошка";
+                    boolean getVeget() {return this.veget;}
+                            String getFire(){return this.fire;}
+                            byte getPows (){return this.pows;}
+                            protected String getSize() {return "как динозавр";}
 
-                    }
-
-                     static class BigAnimal {
-                        public BigAnimal(boolean veget, String speak, byte pows) {
-                        }
-
-                        protected static String getSize() {
-                            return "как динозавр";
-                        }
-
-                        public class Goose extends SmallAnimal {
+                         class Goose extends SmallAnimal {
                             String smallsize;
-
                             public Goose(boolean veget, String speak, byte pows, String smallsize) {
-                                super(veget, speak, pows);
-                                this.smallsize = smallsize;
+                                super(veget,speak,pows);
+                                this.smallsize=smallsize;
+
                                 System.out.println("Гусь маленький" + Goose.getSize());
                             }
 
-                            public  class Dragon extends BigAnimal {
-                                String bigsize;
-                                String fire;
+                             @Override
+                             boolean getVeget() {
+                                 return super.getVeget();
+                             }
 
-                                public Dragon(boolean veget, String speak, byte pows, String bigsize, String fire) {
-                                    super(veget, speak, pows);
-                                    this.bigsize = bigsize;
-                                    this.fire = fire;
+                             @Override
+                             String getSpeak() {
+                                 return super.getSpeak();
+                             }
+
+                             @Override
+                             byte getPows() {
+                                 return super.getPows();
+                             }
+
+                             class Dragon extends BigAnimal {
+                               public Dragon(boolean veget, byte pows, String bigsize, String fire) {
+                                    super(veget, fire, pows, bigsize);
+
                                     System.out.println("Дракон большой" + Dragon.getSize());
+                                }
+
+                                @Override
+                                boolean getVeget() {
+                                    return super.getVeget();
+                                }
+
+                                @Override
+                                String getFire() {
+                                    return super.getFire();
+                                }
+
+                                @Override
+                                byte getPows() {
+                                    return super.getPows();
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-    }
+
+
 }
+
+
+
+
 
 

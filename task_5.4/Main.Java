@@ -1,7 +1,7 @@
 /* Создать класс Dog. У собаки должна быть кличка String name и возраст int age.
 *Создайте геттеры и сеттеры для всех переменных класса Dog.
 * Создайте объект Dog  */
- Dog dog = new Dog( "Boss", 4);
+ Dog dog = new Dog( "Alex", 4);
         dog.setAge(4);
         dog.setName("Alex");
         System.out.println("Кличка:" + dog.getName());

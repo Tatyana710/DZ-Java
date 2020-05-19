@@ -3,10 +3,10 @@
 public class Main {
     public static void main(String[] args) {
         String[] stroka = {"Мама Мыла Раму"};
-        String newstr = " ";
         for (int i = 0; i < stroka.length; i++) {
-            if (newstr==stroka[i]) newstr+= " "+1;
-            System.out.print(""+stroka[i]);
+           for (int j = 0; j < stroka.length; j++) { 
+               if(i!=j){
+            System.out.print(stroka[i]+stroka[j]+stroka[3-(i+j)]);
 
 
           }

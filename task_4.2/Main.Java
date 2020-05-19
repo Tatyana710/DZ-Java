@@ -1,5 +1,5 @@
 /* Написать функцию, которая возвращает минимум из трёх чиселю */
-import java.util.Scanner;
+mport java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -11,12 +11,15 @@ public class Main {
 
 
     static int min(int a, int b, int c) {
-       return c;
+        if (a<b&&a<c) return a;
+        else if (b<a&&b<c) return b;
+        else return c;
 
     }
 
-   
+
 }
+
 
 
       

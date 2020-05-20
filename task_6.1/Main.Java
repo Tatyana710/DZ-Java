@@ -10,7 +10,7 @@
  */
 public class Main {
     public static void main(String[] args) {
-        new Main.LuxiurousCar("чёрный", "очень сильный").printlnDesire();
+        new Main.LuxiurousCar("чёрный", "очень мощный").printlnDesire();
         new Main.CheapCar("жёлтый", "слабый").printlnDesire();
         new Main.Ferrari("Красный", "мощный").printlnDesire();
         new Main.Lanos("Белый", "не очень мощный").printlnDesire();
@@ -33,16 +33,15 @@ public class Main {
     public static class Lanos {
         String color2;
         String motor2;
-
+        static String getColor2() {return "Белый";}
+        static String getMotor2() {return "не очень мощный";}
         public Lanos(String color2, String motor2) {
             this.color2 = color2;
             this.motor2 = motor2;
+
         }
 
-        static String getColor2() {return "Белый";}
-        static String getMotor2() {return "не очень мощный";}
-
-        public void printlnDesire() {
+        protected void printlnDesire() {
             System.out.println(Constants.WANT_STRING + Constants.LANOS_NAME);
             System.out.println(Constants.LANOS_NAME+" "+" "+Lanos.getColor2()+" "+" "+Lanos.getMotor2());
 
@@ -52,16 +51,16 @@ public class Main {
     public static class LuxiurousCar {
         String color3;
         String motor3;
+        static String getColor3() {return "Чёрный";}
+        static String getMotor3() {return "очень мощный";}
         public LuxiurousCar(String color3, String motor3) {
             this.color3 = color3;
             this.motor3 = motor3;
         }
-        static String getColor3() {return "Чёрный";}
 
-        static String getMotor3() {return "очень мощный";}
-        public void printlnDesire() {
+        protected void printlnDesire() {
             System.out.println(Constants.WANT_STRING + Constants.LUXURIOUS_CAR);
-            System.out.println("Лакшери"+""+LuxiurousCar.getColor3()+""+""+LuxiurousCar.getMotor3());
+            System.out.println("Лакшери"+""+" "+LuxiurousCar.getColor3()+""+" "+LuxiurousCar.getMotor3());
 
         }
     }
@@ -73,13 +72,12 @@ public class Main {
             this.color4 = color4;
             this.motor4 = motor4;
         }
-        String getColor4() {return "Жёлтый";}
-        String getMotor4() {return "слабый";}
+
         public void printlnDesire() {
             System.out.println(Constants.WANT_STRING+" " + Constants.CHEAP_CAR);
         }
     }
-
+   
     public static class Constants {
         public static String WANT_STRING = " Я хочу ездить на ";
         public static String LUXURIOUS_CAR = " РОСКОШНОЙ МАШИНЕ";
@@ -89,5 +87,7 @@ public class Main {
     }
 
 }
+
+
 
 

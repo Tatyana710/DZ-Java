@@ -8,55 +8,45 @@
  */
 public class Main {
     public static void main(String[] args) {
-        Goose goose = new Goose("Га-га-га", true, 2, "гусь маленький");
-        Dragon dragon = new Dragon("огонь",false, 4, "дракон боольшой");
+        Goose goose = new Goose();
+        Dragon dragon = new Dragon();
+        System.out.println(goose.getSize());
+        System.out.println(dragon.getSize());
     }
-    public static class Goose {
-        String speak;
-        boolean veget;
-        String size;
-        int pows;
 
-        public Goose(String speak, boolean veget, int pows, String size) {
-            this.speak = speak;
-            this.veget = veget;
-            this.pows = pows;
-            this.size = size;
-            System.out.println("Гусь маленький"+getSize());
+    public static class BigAnimal {
+        protected String getSize() {
+            return "как динозавр";
         }
     }
-        public static class Dragon{
-            String fire;
-            boolean veget;
-            int pows;
-            String size;
-            public Dragon( String fire, boolean veget,int pows, String size){
-                this.fire=fire;
-                this.veget=veget;
-                this.pows=pows;
-                this.size=size;
-                System.out.println("Гусь маленький" );
-            }
 
-        }
-
-    class Gooose extends SmallAnimal {
-        String smallsize;
-        boolean veget;
-        String speak;
-        byte pows;
-    public SmallAnimal(boolean veget, String speak, byte pows, String smallsize) {
-            super(veget, speak, pows, smallsize);
-            this.veget = veget;
-            this.smallsize = smallsize;
-            this.speak = speak;
-            this.pows = pows;
-            System.out.println("Гусь маленький" + Goose.getSize());
+    public static class SmallAnimal {
+        String getSize() {
+            return "как кошка";
         }
     }
+
+
+    public static class Goose extends SmallAnimal {
+       @Override
+       public String getSize() {
+           super.getSize();
+           String size="Гусь маленький " + super.getSize();
+            return size;
+       }
+
+    }
+
+public static class Dragon extends BigAnimal {
+    @Override
+    public String getSize() {
+        super.getSize();
+       String size="Дракон большой "+super.getSize();
+       return size;
+     }
+ }
+
 }
-
-
 
 
 

@@ -10,74 +10,13 @@
  */
 public class Main {
     public static void main(String[] args) {
-        new Main.LuxiurousCar("чёрный", "очень мощный").printlnDesire();
+        new Main.LuxiurousCar("чёрный", " мощный").printlnDesire();
         new Main.CheapCar("жёлтый", "слабый").printlnDesire();
-        new Main.Ferrari("Красный", "мощный").printlnDesire();
+        new Main.Ferrari("Красный", "очень мощный").printlnDesire();
         new Main.Lanos("Белый", "не очень мощный").printlnDesire();
+
     }
 
-
-    public static class Ferrari {
-        String color1;
-        String motor1;
-
-        public Ferrari(String color1, String motor1) {
-            this.color1 = color1;
-            this.motor1 = motor1;
-        }
-        public void printlnDesire() {
-            System.out.println(Constants.WANT_STRING + Constants.FERRARI_NAME);
-
-        }
-    }
-    public static class Lanos {
-        String color2;
-        String motor2;
-        static String getColor2() {return "Белый";}
-        static String getMotor2() {return "не очень мощный";}
-        public Lanos(String color2, String motor2) {
-            this.color2 = color2;
-            this.motor2 = motor2;
-
-        }
-
-        protected void printlnDesire() {
-            System.out.println(Constants.WANT_STRING + Constants.LANOS_NAME);
-            System.out.println(Constants.LANOS_NAME+" "+" "+Lanos.getColor2()+" "+" "+Lanos.getMotor2());
-
-        }
-    }
-
-    public static class LuxiurousCar {
-        String color3;
-        String motor3;
-        static String getColor3() {return "Чёрный";}
-        static String getMotor3() {return "очень мощный";}
-        public LuxiurousCar(String color3, String motor3) {
-            this.color3 = color3;
-            this.motor3 = motor3;
-        }
-
-        protected void printlnDesire() {
-            System.out.println(Constants.WANT_STRING + Constants.LUXURIOUS_CAR);
-            System.out.println("Лакшери"+""+" "+LuxiurousCar.getColor3()+""+" "+LuxiurousCar.getMotor3());
-
-        }
-    }
-
-    public static class CheapCar {
-        String color4;
-        String motor4;
-        public CheapCar(String color4, String motor4) {
-            this.color4 = color4;
-            this.motor4 = motor4;
-        }
-
-        public void printlnDesire() {
-            System.out.println(Constants.WANT_STRING+" " + Constants.CHEAP_CAR);
-        }
-    }
-   
     public static class Constants {
         public static String WANT_STRING = " Я хочу ездить на ";
         public static String LUXURIOUS_CAR = " РОСКОШНОЙ МАШИНЕ";
@@ -86,7 +25,53 @@ public class Main {
         public static String LANOS_NAME = " Ланос";
     }
 
-}
+    static class Ferrari {
+        public void printlnDesire() {
+        }
+
+        String color1;
+        String motor1;
+
+        public Ferrari(String color1, String motor1) {
+            this.color1 = color1;
+            this.motor1 = motor1;
+            System.out.println(Constants.WANT_STRING + Constants.FERRARI_NAME);
+
+        }
+    }
+
+    static class Lanos {
+        public void printlnDesire() {
+        }
+
+        String color2;
+        String motor2;
+
+        public Lanos(String color2, String motor2) {
+            this.color2 = color2;
+            this.motor2 = motor2;
+            System.out.println(Constants.WANT_STRING + Constants.LANOS_NAME);
+
+        }
+    }
+
+    public static class CheapCar extends Lanos {
+        public CheapCar(String color2, String motor2) {
+            super(color2, motor2);
+            System.out.println(Constants.WANT_STRING + " " + Constants.CHEAP_CAR);
+
+            }
+        }
+    
+    public static class LuxiurousCar extends Ferrari {
+        public LuxiurousCar(String color1, String motor1) {
+            super(color1, motor1);
+            System.out.println(Constants.WANT_STRING + Constants.LUXURIOUS_CAR);
+        }
+    }
+
+
+    }
 
 
 
